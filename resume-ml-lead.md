@@ -25,7 +25,7 @@ DS-команда из 2 человек (играющий лид). Полный 
 - **NLP:** классификация тематик клиентских отзывов (transformers, дообучение ru-моделей); разовая выгрузка структурированных данных из заказ-нарядов контрагентов для аналитики затрат на материалы. → [projects/nps-text-classification.md](projects/nps-text-classification.md), [projects/spare-pdf-parsing.md](projects/spare-pdf-parsing.md)
 - **Operations:** приоритизация машин на мойку — logreg по клиентским отзывам, дополненный CV-score по фотографиям. В проде. → [projects/wash-prioritization.md](projects/wash-prioritization.md)
 - **Pricing:** uplift-модель персонификации цены. +3% proxy-AGP против контроля и рандома в offline-эксперименте, статистически значимо. A/B-эксперименты с CUPED — первым в команде применил для метрик с высокой дисперсией (AGP), без него статзначимость не ловилась. → [projects/pricing-uplift.md](projects/pricing-uplift.md)
-- **Causal-аналитика:** Double ML-оценка эффективности взыскания ущерба с клиентов за повреждения автомобилей. → [projects/damage-recovery-dml.md](projects/damage-recovery-dml.md)
+- **Causal-аналитика:** экономика взыскания ущерба за повреждения — Double ML-оценка рычагов собираемости, математическая модель recall модерации, декомпозиция потерь процесса. → [projects/damage-economics.md](projects/damage-economics.md)
 
 **Результаты (инфраструктура и процессы):**
 

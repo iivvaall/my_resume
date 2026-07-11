@@ -17,7 +17,7 @@ delimobil.ru — крупнейший каршеринг России.
 | [Классификация тематик отзывов](../projects/nps-text-classification.md) | Мультилейбл на transformers, focal loss, DVC | Прод |
 | [Приоритизация машин на мойку](../projects/wash-prioritization.md) | Logreg по отзывам + CV-score по фото | Прод |
 | [Uplift-прайсинг](../projects/pricing-uplift.md) | Персонификация цены, +3% proxy-AGP offline, CUPED | Offline-эксперимент |
-| [Double ML: взыскание ущерба](../projects/damage-recovery-dml.md) | Causal-оценка эффективности взыскания | Аналитика |
+| [Экономика взыскания ущерба](../projects/damage-economics.md) | DML-оценка рычагов собираемости, модель recall модерации, декомпозиция потерь | Аналитика, exec-отчёт |
 | [Парсинг заказ-нарядов](../projects/spare-pdf-parsing.md) | Реконструкция таблиц из PDF-примитивов (shapely + парсер-комбинаторы) | Разовая выгрузка |
 | [Zero-shot VLM на повреждениях](../projects/damages-vlm.md) | Eval-харнесс Qwen3-VL на 7k размеченных фото | Исследование |
 

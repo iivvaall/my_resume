@@ -26,7 +26,7 @@
 
 ## Смежное: causal inference
 
-Ranking/uplift-опыт дополняется причинно-следственной аналитикой — Double ML, плацебо-тесты, within-дизайны: [projects/damage-recovery-dml.md](../projects/damage-recovery-dml.md), [projects/photo-check-on-device.md](../projects/photo-check-on-device.md) (причинная оценка эффекта модели).
+Ranking/uplift-опыт дополняется причинно-следственной аналитикой — Double ML, плацебо-тесты, within-дизайны: [projects/damage-economics.md](../projects/damage-economics.md), [projects/photo-check-on-device.md](../projects/photo-check-on-device.md) (причинная оценка эффекта модели).
 
 ## Границы опыта (честно)
 
