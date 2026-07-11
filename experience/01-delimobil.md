@@ -1,0 +1,33 @@
+# Delimobil · март 2024 — настоящее время
+
+**Ведущий специалист по машинному обучению** (03.2024), **Руководитель группы машинного обучения** (с 01.2026)
+delimobil.ru — крупнейший каршеринг России.
+
+## Контекст и роль
+
+Играющий лид DS-команды из 2 человек. Полный цикл ML-проектов: от формулировки задачи и переговоров с бизнесом до прод-моделей и поддержки инфраструктуры. Помимо ML — вся серверная и инфраструктурная обвязка направления: сервисы на FastAPI/async, инференс-платформа, интеграции с корпоративным контуром, CI/CD.
+
+## Проекты
+
+| Проект | Суть | Статус |
+|---|---|---|
+| [Проверка фото при завершении аренды](../projects/photo-check-on-device.md) | CV on-device (YOLOv8n-seg → TFLite); −46% «обходных» аренд, ~50 млн ₽/год | Прод |
+| [mosaico — LLM-агентная платформа](../projects/mosaico-llm-agents.md) | Аналитический и HR-чатботы, langchain + MCP, sandbox, ~6k строк | Прод |
+| [Инференс-платформа](../projects/inference-platform.md) | FastAPI-фронт + TorchServe (CPU/GPU), CI моделей, Prometheus | Прод |
+| [Классификация тематик отзывов](../projects/nps-text-classification.md) | Мультилейбл на transformers, focal loss, DVC | Прод |
+| [Приоритизация машин на мойку](../projects/wash-prioritization.md) | Logreg по отзывам + CV-score по фото | Прод |
+| [Uplift-прайсинг](../projects/pricing-uplift.md) | Персонификация цены, +3% proxy-AGP offline, CUPED | Offline-эксперимент |
+| [Double ML: взыскание ущерба](../projects/damage-recovery-dml.md) | Causal-оценка эффективности взыскания | Аналитика |
+| [Парсинг заказ-нарядов](../projects/spare-pdf-parsing.md) | Реконструкция таблиц из PDF-примитивов (shapely + парсер-комбинаторы) | Разовая выгрузка |
+| [Zero-shot VLM на повреждениях](../projects/damages-vlm.md) | Eval-харнесс Qwen3-VL на 7k размеченных фото | Исследование |
+
+## Лидерство и процессы
+
+- Построил MLOps-инфраструктуру с нуля: воспроизводимые пайплайны (git + DVC), one-click деплой, гарантия соответствия prod-модели тестируемой (детали — [domains/mlops.md](../domains/mlops.md)).
+- Стандарт команды: от постановки задачи до осязаемого baseline — 2 недели.
+- Управление ожиданиями бизнеса: пример — проект детекции повреждений, где переформулировал продуктовую задачу с «заменить модераторов» на «ускорить модерацию», что дало реализуемый инкремент (модели ракурса) вместо тупика.
+- Повседневный agentic-инжиниринг с Claude Code: разработка, ML-эксперименты, аналитика на реальных данных; часть задач делегируется агенту целиком с приёмкой по eval.
+
+## Стек
+
+Python 3.11, FastAPI, asyncio, psycopg3, httpx, PostgreSQL, Vertica, PyTorch, transformers, ultralytics/YOLO, CatBoost, TorchServe, TFLite, Docker, GitLab CI, DVC, pytest, Prometheus, OIDC/JWT, MCP, LangGraph, langchain, uv. Kubernetes — деплой-таргет (докеризация и архитектура сервисов мои, Helm/werf — devops).
