@@ -17,6 +17,7 @@
 |---|---|
 | Классическое резюме под роль Lead DS / ML Engineer | [resume-ml-lead.md](resume-ml-lead.md) |
 | Резюме под Python backend (в т.ч. part-time) | [resume-python-backend.md](resume-python-backend.md) |
+| Как я веду команду: метод, работа с разногласиями, границы | [leadership.md](leadership.md) |
 | Хронология мест работы, по файлу на работодателя | [experience/](experience/) |
 | Опыт по доменам: LLM, CV, ranking, MLOps | [domains/](domains/) |
 | Детальные описания проектов (стек, метрики, границы вклада) | [projects/](projects/) |
@@ -38,7 +39,7 @@
 ## Ключевые факты
 
 - Полный цикл ML: постановка задачи с бизнесом → данные/разметка → модель → прод → causal-оценка эффекта.
-- Играющий лид: команда DS, найм, процессы (scrum-мастерство, [статья на Habr](https://habr.com/ru/companies/talenttech/articles/589709/)), стандарт «от постановки до baseline — 2 недели».
+- Играющий лид: команда DS, найм, процессы (scrum-мастерство, [статья на Habr](https://habr.com/ru/companies/talenttech/articles/589709/)), стандарт «от постановки до baseline — 2 недели». Метод работы с командой — в [leadership.md](leadership.md).
 - MLOps с нуля: git + DVC, one-click деплой, CI с гарантией «прод-модель = тестируемая».
 - LLM-агенты в проде: платформа на langchain + MCP, harness-уровневые гардрейлы (контейнерный sandbox), поэтапная раскатка.
 - Backend-фундамент: серверный Python с 2013 года (aiohttp, FastAPI/async, Celery, TorchServe, Docker, CI/CD).
