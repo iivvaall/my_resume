@@ -17,7 +17,7 @@
 
 | Место | Вклад в инфраструктуру |
 |---|---|
-| Delimobil (2024–) | MLOps с нуля: git+DVC, one-click деплой, TorchServe-платформа, CI моделей |
+| Delimobil (2024–2026) | MLOps с нуля: git+DVC, one-click деплой, TorchServe-платформа, CI моделей |
 | Yandex Market (2022–24) | Прод-пайплайн обучения формул на Nirvana/Valhalla, ретраи, тесты примитивов |
 | Сбермегамаркет (2022) | ML-инфра рекомендаций под ключ: PySpark/YARN, packaging окружения, Grafana-мониторинг |
 | JungleJobs→TalentTech (2018–22) | Инфраструктура DS-команды с нуля: aiohttp-сервис, Celery, CI/CD, Ansible, ELK, JupyterHub |
