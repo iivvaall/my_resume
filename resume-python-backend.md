@@ -4,7 +4,7 @@
 - **Telegram:** @iivvaall
 - **Формат:** удалённо; рассматриваю в том числе part-time / проектный формат. Детали сотрудничества обсуждаются напрямую.
 
-Вариант резюме с курсом **backend-first, ML — как плюс**. Тот же опыт, что в [resume-ml-lead.md](resume-ml-lead.md), но с раскрытой инженерной составляющей каждого места.
+Резюме с акцентом на backend-разработку. Опыт работы с моделями подробнее описан в [ML-версии](resume-ml-lead.md).
 
 ## О себе
 
@@ -12,32 +12,32 @@ Python backend-разработчик с пониманием ML/DS/AI-спец�
 
 В Delimobil, помимо ML, занимался серверной обвязкой: сервисы на **FastAPI (полностью async: psycopg3, httpx)**, слоистая архитектура портов/адаптеров с тестопригодностью на интерфейсах и моках, собственный **OIDC/JWT**-слой и интеграции с корпоративным контуром (Active Directory, Keycloak, Confluence, 1С, eXpress). Инференс-платформа: FastAPI-фронт + TorchServe (CPU/GPU), структурированные JSON-логи, Prometheus. Докеризация и CI/CD в GitLab; сервисы едут в k8s (helm/werf держит devops).
 
-Раньше — чистый backend: aiohttp/twisted и REST-сервисы (Яндекс, JungleJobs), Celery + Postgres + Mongo для фоновых задач, gevent + libvirt в инфраструктуре анализа вредоносного кода (Касперский), backend под SLES (НИИ ТП). Инженерная дисциплина сквозная — CI/CD и воспроизводимость на каждом месте: Puppet и Jenkins, Airflow, Docker, one-click деплой.
+Раньше — чистый backend: aiohttp/twisted и REST-сервисы (Яндекс, JungleJobs), Celery + Postgres + Mongo для фоновых задач, gevent + libvirt в инфраструктуре анализа вредоносного кода (Касперский), backend под SLES (НИИ ТП). Занимался автоматизацией сборки и развёртывания: Puppet и Jenkins, Airflow, Docker, one-click деплой.
 
-ML — как плюс: модели от идеи до прода (CV, NLP, ranking, uplift, LLM-агенты); pandas/numpy, sklearn, PyTorch, transformers, CatBoost.
+Опыт в ML: модели от идеи до прода (CV, NLP, ranking, uplift, LLM-агенты); pandas/numpy, sklearn, PyTorch, transformers, CatBoost.
 
 Сильная сторона — собрать работающую систему целиком (код, инфраструктура, домен) и довести незнакомую задачу до MVP.
 
-AI-native: использую агентов для проектирования, аналитики, ML-экспериментов и разработки — от простых диалоговых сессий до loop engineering. Активно использую субагентов: отдельный агент-планировщик декомпозирует задачи, агенты выполняют их параллельно. Задаю направление, проверяю решения и отвечаю за результат.
+Использую LLM-агентов для проектирования, аналитики, ML-экспериментов и разработки: от диалога до автоматических циклов работы. Для больших задач выделяю агента-планировщика и запускаю несколько агентов параллельно. Сам ставлю задачу, проверяю решения и принимаю результат.
 
 Дополнительно: гештальт-терапевт, специализация по работе с группами.
 
 ## Навыки
 
-**Серверные (подтверждены кодом/опытом):** FastAPI, PostgreSQL, asyncio, REST API, aiohttp, Celery, GitLab CI, pytest, MongoDB, Ansible, Airflow, Bash, OIDC/JWT, Prometheus, Docker, Linux, Git. Kubernetes — как деплой-таргет (докеризация и архитектура сервиса мои, Helm/werf — на стороне devops).
+**Backend и инфраструктура:** FastAPI, PostgreSQL, asyncio, REST API, aiohttp, Celery, GitLab CI, pytest, MongoDB, Ansible, Airflow, Bash, OIDC/JWT, Prometheus, Docker, Linux, Git. Kubernetes — как деплой-таргет (докеризация и архитектура сервиса мои, Helm/werf — на стороне devops).
 
-**ML (как плюс):** Python, pandas, PyTorch, CatBoost, transformers, sklearn.
+**ML:** Python, pandas, PyTorch, CatBoost, transformers, sklearn.
 
-## Опыт: инженерная выжимка по местам
+## Опыт работы
 
 ### 1. Delimobil (03.2024 — 10.2026) · Руководитель группы, ведущий специалист по ML
 
-Играющий лид DS-команды (2 чел). Помимо моделей — вся серверная и инфраструктурная обвязка на мне: сервисы на FastAPI/async, инференс-платформа, интеграции с корп-контуром, CI/CD. Всё подтверждено исходниками.
+Играющий лид DS-команды (2 чел). Помимо моделей — вся серверная и инфраструктурная обвязка на мне: сервисы на FastAPI/async, инференс-платформа, интеграции с корп-контуром, CI/CD.
 
 **mosaico — LLM-агентная платформа (backend, ~6k строк Python 3.11):**
 - FastAPI, полностью async: async PostgreSQL (psycopg3 + пул соединений), httpx AsyncClient; синхронные драйверы (Vertica, LDAP) изолированы через `asyncio.to_thread` + Semaphore.
 - Слоистая архитектура портов/адаптеров (core / links / domain / logic / facade) со строгими правилами зависимостей; DI по типу-аннотации через `inspect.signature`.
-- Тестопригодность как принцип: внешние клиенты — на ABC/Protocol, для каждого пара «реальная реализация + Mock», contract-тесты; ~7k строк тестов (≈1:1 к коду), pytest + pytest-asyncio, e2e через docker compose.
+- Внешние клиенты — на ABC/Protocol, для каждого пара «реальная реализация + Mock», contract-тесты; ~7k строк тестов (≈1:1 к коду), pytest + pytest-asyncio, e2e через docker compose.
 - Интеграция с корпоративной инфраструктурой: Active Directory (ldap3/LDAPS), Keycloak (OIDC, JWT/JWKS, RS256 — собственный слой авторизации), Confluence (REST), 1С (REST), Vertica, eXpress-боты (pybotx).
 - Transport-agnostic агенты: единый контракт `Agent`, три транспорта поверх одного кода — OpenAI-совместимый API, eXpress, собственный MCP-сервер (StreamableHTTP + OAuth).
 - Sandbox исполнения кода: отдельный сервис, дочерние Docker-контейнеры с network none, ресурсными лимитами и таймаутом.
